@@ -260,7 +260,6 @@ blockquote p {
 }
 
 .source-note a {
-  margin-left: 0.45rem;
   color: var(--pico-primary);
   text-decoration-color: rgba(224, 189, 117, 0.45);
   text-underline-offset: 0.2em;

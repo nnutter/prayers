@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#11120f" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <meta
       name="description"
       content="Luther's morning and evening prayers, selected for your local time."
@@ -56,60 +59,58 @@
             In the evening when you go to bed, make the sign of the holy cross
             and say:
           </p>
-          <p class="inline-prayers" data-prayer-period="morning">
-            In the name of the Father and of the Son and of the Holy Spirit.
-            Amen.
-          </p>
-          <p class="invocation" data-prayer-period="evening" hidden>
-            In the name of the Father and of the Son and of the Holy Spirit.
-            Amen.
-          </p>
+          <section
+            class="inline-prayers"
+            aria-labelledby="trinitiarian-formula"
+          >
+            <h3 id="trinitiarian-formula">Trinitiarian Formula</h3>
+            <div class="poetic-text">
+              <p>
+                In the name of the Father and of the Son and of the Holy Spirit.
+                Amen.
+              </p>
+            </div>
+          </section>
           <p class="instruction">
             Then, kneeling or standing, repeat the Apostles’ Creed and the
             Lord’s Prayer:
           </p>
-          <div class="common-prayers">
-            <section class="inline-prayers" aria-labelledby="creed-title">
-              <h3 id="creed-title">Apostles’ Creed</h3>
-              <div class="poetic-text">
-                <p>
-                  I believe in God, the Father Almighty, Maker of heaven and
-                  earth.
-                </p>
-                <p>
-                  And in Jesus Christ, His only Son, our Lord, who was conceived
-                  by the Holy Spirit, born of the virgin Mary, suffered under
-                  Pontius Pilate, was crucified, died and was buried. He
-                  descended into hell. The third day He rose again from the
-                  dead. He ascended into heaven and sits at the right hand of
-                  God, the Fathe Almighty. From thence He will come to judge the
-                  living and the dead.
-                </p>
-                <p>
-                  I believe in the Holy Spirit, the holy Christian Church, the
-                  communion of saints, the forgiveness of sins, the resurrection
-                  of the body, and the life everlasting. Amen.
-                </p>
-              </div>
-            </section>
-            <section
-              class="inline-prayers"
-              aria-labelledby="lords-prayer-title"
-            >
-              <h3 id="lords-prayer-title">The Lord’s Prayer</h3>
-              <div class="poetic-text">
-                <p>
-                  Our Father who art in heaven, hallowed be Thy name, Thy
-                  kingdom come, Thy will be done on earth as it is in heaven.
-                  Give us this day our daily bread; and forgive us our
-                  trespasses, as we forgive those who trespass against us; and
-                  lead us not into temptation, but deliver us from evil. For
-                  Thine is the kingdom and the power and the glory forever and
-                  ever. Amen.
-                </p>
-              </div>
-            </section>
-          </div>
+          <section class="inline-prayers" aria-labelledby="creed-title">
+            <h3 id="creed-title">Apostles’ Creed</h3>
+            <div class="poetic-text">
+              <p>
+                I believe in God, the Father Almighty, Maker of heaven and
+                earth.
+              </p>
+              <p>
+                And in Jesus Christ, His only Son, our Lord, who was conceived
+                by the Holy Spirit, born of the virgin Mary, suffered under
+                Pontius Pilate, was crucified, died and was buried. He descended
+                into hell. The third day He rose again from the dead. He
+                ascended into heaven and sits at the right hand of God, the
+                Fathe Almighty. From thence He will come to judge the living and
+                the dead.
+              </p>
+              <p>
+                I believe in the Holy Spirit, the holy Christian Church, the
+                communion of saints, the forgiveness of sins, the resurrection
+                of the body, and the life everlasting. Amen.
+              </p>
+            </div>
+          </section>
+          <section class="inline-prayers" aria-labelledby="lords-prayer-title">
+            <h3 id="lords-prayer-title">The Lord’s Prayer</h3>
+            <div class="poetic-text">
+              <p>
+                Our Father who art in heaven, hallowed be Thy name, Thy kingdom
+                come, Thy will be done on earth as it is in heaven. Give us this
+                day our daily bread; and forgive us our trespasses, as we
+                forgive those who trespass against us; and lead us not into
+                temptation, but deliver us from evil. For Thine is the kingdom
+                and the power and the glory forever and ever. Amen.
+              </p>
+            </div>
+          </section>
           <p class="instruction">
             If you choose, you may also say this little prayer:
           </p>
@@ -118,6 +119,7 @@
             aria-label="Morning optional prayer"
             data-prayer-period="morning"
           >
+            <h3 id="morning-prayer-title">Morning Prayer</h3>
             <div class="poetic-text">
               <p>
                 I thank you, my heavenly Father, through Jesus Christ, Your dear
@@ -136,6 +138,7 @@
             data-prayer-period="evening"
             hidden
           >
+            <h3 id="evening-prayer-title">Evening Prayer</h3>
             <div class="poetic-text">
               <p>
                 I thank you, my heavenly Father, through Jesus Christ, Your dear
@@ -158,14 +161,31 @@
       </section>
 
       <p class="source-note">
-        From <cite>Luther’s Small Catechism</cite>.
+        From <cite>Luther’s Small Catechism</cite>,
         <a
           href="https://bookofconcord.org/small-catechism/"
           target="_blank"
           rel="noreferrer"
         >
-          Read the source <span aria-hidden="true">↗</span>
+          read the source.
         </a>
+        <br />
+        The <cite>Luther Rose</cite> icons are based on
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Lutherrose.svg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Lutherrose.svg
+        </a>
+        and licensed under
+        <a
+          href="https://creativecommons.org/licenses/by-sa/3.0/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          CC BY-SA 3.0 </a
+        >.
       </p>
     </main>
   </body>

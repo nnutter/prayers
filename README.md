@@ -27,6 +27,11 @@ The workflow in `.github/workflows/pages.yml` publishes the site to GitHub Pages
 In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
 The standard project-site address will be `https://nnutter.github.io/prayers/`.
 
+## Icon
+
+The Luther’s Rose icon is based on [Lutherrose.svg](https://upload.wikimedia.org/wikipedia/commons/a/ab/Lutherrose.svg) by [Jed](https://commons.wikimedia.org/wiki/User:Jed), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+The PNG and ICO files are generated from the SVG master.
+
 ## Source
 
 The prayers are from [Luther’s Small Catechism](https://bookofconcord.org/small-catechism/).
