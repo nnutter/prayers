@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#11120f" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <meta
       name="description"
       content="Luther's morning and evening prayers, selected for your local time."
@@ -21,12 +24,12 @@
             class="period-toggle"
             type="button"
             id="period-toggle"
-            aria-controls="morning-prayer evening-prayer"
+            aria-controls="prayer-panel"
             aria-label="Switch to evening prayer"
           >
-            <span class="eyebrow" id="period-label" aria-live="polite"
-              >Good morning</span
-            >
+            <span class="eyebrow" id="period-label" aria-live="polite">
+              Good morning
+            </span>
           </button>
           <p class="local-time" aria-label="Your local time">
             <span class="status-dot" aria-hidden="true"></span>
@@ -36,201 +39,153 @@
         </div>
       </section>
 
-      <section
-        class="prayer-panel"
-        id="morning-prayer"
-        data-prayer-panel="morning"
-        aria-labelledby="morning-title"
-      >
+      <section class="prayer-panel" id="prayer-panel" aria-label="Prayer">
         <div class="panel-heading">
-          <div>
+          <div data-prayer-period="morning">
             <p class="section-kicker">Morning Prayer</p>
-            <h2 id="morning-title">Rise to God's glory</h2>
+            <h2 id="morning-title">Rise in God's grace</h2>
           </div>
-        </div>
-        <div class="prayer-body">
-          <p class="instruction">
-            In the morning when you get up, make the sign of the holy cross and
-            say:
-          </p>
-          <p class="inline-prayers">
-            In the name of the Father<br />
-            and of the Son<br />
-            and of the Holy Spirit.<br />
-            Amen.
-          </p>
-          <p class="instruction">
-            Then, kneeling or standing, repeat the Apostles’ Creed and the
-            Lord’s Prayer:
-          </p>
-          <div class="common-prayers-slot" data-common-prayers-slot="morning">
-            <div class="common-prayers" id="common-prayers">
-              <section
-                class="inline-prayers"
-                aria-labelledby="morning-creed-title"
-              >
-                <h3 id="morning-creed-title">Apostles’ Creed</h3>
-                <div class="poetic-text">
-                  <p>
-                    I believe in God,<br />
-                    the Father Almighty,<br />
-                    Maker of heaven and earth.
-                  </p>
-                  <p>
-                    And in Jesus Christ,<br />
-                    His only Son,<br />
-                    our Lord,<br />
-                    who was conceived by the Holy Spirit,<br />
-                    born of the virgin Mary,<br />
-                    suffered under Pontius Pilate,<br />
-                    was crucified, died and was buried.<br />
-                    He descended into hell.<br />
-                    The third day He rose again from the dead.<br />
-                    He ascended into heaven<br />
-                    &nbsp;&nbsp;and sits at the right hand of God, the Father
-                    Almighty.<br />
-                    From thence He will come to judge<br />
-                    &nbsp;&nbsp;the living and the dead.
-                  </p>
-                  <p>
-                    I believe in the Holy Spirit,<br />
-                    the holy Christian Church,<br />
-                    the communion of saints,<br />
-                    the forgiveness of sins,<br />
-                    the resurrection of the body,<br />
-                    and the life everlasting.<br />
-                    Amen.
-                  </p>
-                </div>
-              </section>
-              <section
-                class="inline-prayers"
-                aria-labelledby="morning-lords-prayer-title"
-              >
-                <h3 id="morning-lords-prayer-title">The Lord’s Prayer</h3>
-                <div class="poetic-text">
-                  <p>
-                    Our Father who art in heaven,<br />
-                    hallowed be Thy name,<br />
-                    Thy kingdom come,<br />
-                    Thy will be done<br />
-                    &nbsp;&nbsp;on earth as it is in heaven.<br />
-                    Give us this day our daily bread;<br />
-                    and forgive us our trespasses,<br />
-                    &nbsp;&nbsp;as we forgive those<br />
-                    &nbsp;&nbsp;who trespass against us;<br />
-                    and lead us not into temptation,<br />
-                    but deliver us from evil.<br />
-                    For Thine is the kingdom<br />
-                    &nbsp;&nbsp;and the power<br />
-                    &nbsp;&nbsp;and the glory<br />
-                    &nbsp;&nbsp;forever and ever.<br />
-                    Amen.
-                  </p>
-                </div>
-              </section>
-            </div>
-          </div>
-          <p class="instruction">
-            If you choose, you may also say this little prayer:
-          </p>
-          <section
-            class="inline-prayers"
-            aria-labelledby="morning-optional-little-prayer"
-          >
-            <div class="poetic-text">
-              <p>
-                I thank you, my heavenly Father,<br />
-                through Jesus Christ, Your dear Son,<br />
-                that You have kept me this night<br />
-                &nbsp;&nbsp;from all harm and danger;<br />
-                and I pray that You would keep me this day<br />
-                &nbsp;&nbsp;also from sin and every evil,<br />
-                that all my doings and life may please You.<br />
-                For into Your hands I commend myself,<br />
-                &nbsp;&nbsp;my body and soul, and all things.<br />
-                Let Your holy angel be with me,<br />
-                that the evil foe may have<br />
-                &nbsp;&nbsp;no power over me.<br />
-                Amen.
-              </p>
-            </div>
-          </section>
-          <p class="instruction">
-            Then go joyfully to your work, singing a hymn, like that of the Ten
-            Commandments, or whatever your devotion may suggest.
-          </p>
-        </div>
-      </section>
-
-      <section
-        class="prayer-panel"
-        id="evening-prayer"
-        data-prayer-panel="evening"
-        aria-labelledby="evening-title"
-        hidden
-      >
-        <div class="panel-heading">
-          <div>
+          <div data-prayer-period="evening" hidden>
             <p class="section-kicker">Evening Prayer</p>
             <h2 id="evening-title">Rest in God’s care</h2>
           </div>
         </div>
         <div class="prayer-body">
-          <p class="instruction">
+          <p class="instruction" data-prayer-period="morning">
+            In the morning when you get up, make the sign of the holy cross and
+            say:
+          </p>
+          <p class="instruction" data-prayer-period="evening" hidden>
             In the evening when you go to bed, make the sign of the holy cross
             and say:
           </p>
-          <p class="invocation">
-            In the name of the Father<br />
-            and of the Son<br />
-            and of the Holy Spirit.<br />
-            Amen.
-          </p>
+          <section
+            class="inline-prayers"
+            aria-labelledby="trinitiarian-formula"
+          >
+            <h3 id="trinitiarian-formula">Trinitiarian Formula</h3>
+            <div class="poetic-text">
+              <p>
+                In the name of the Father and of the Son and of the Holy Spirit.
+                Amen.
+              </p>
+            </div>
+          </section>
           <p class="instruction">
             Then, kneeling or standing, repeat the Apostles’ Creed and the
             Lord’s Prayer:
           </p>
-          <div
-            class="common-prayers-slot"
-            data-common-prayers-slot="evening"
-          ></div>
+          <section class="inline-prayers" aria-labelledby="creed-title">
+            <h3 id="creed-title">Apostles’ Creed</h3>
+            <div class="poetic-text">
+              <p>
+                I believe in God, the Father Almighty, Maker of heaven and
+                earth.
+              </p>
+              <p>
+                And in Jesus Christ, His only Son, our Lord, who was conceived
+                by the Holy Spirit, born of the virgin Mary, suffered under
+                Pontius Pilate, was crucified, died and was buried. He descended
+                into hell. The third day He rose again from the dead. He
+                ascended into heaven and sits at the right hand of God, the
+                Fathe Almighty. From thence He will come to judge the living and
+                the dead.
+              </p>
+              <p>
+                I believe in the Holy Spirit, the holy Christian Church, the
+                communion of saints, the forgiveness of sins, the resurrection
+                of the body, and the life everlasting. Amen.
+              </p>
+            </div>
+          </section>
+          <section class="inline-prayers" aria-labelledby="lords-prayer-title">
+            <h3 id="lords-prayer-title">The Lord’s Prayer</h3>
+            <div class="poetic-text">
+              <p>
+                Our Father who art in heaven, hallowed be Thy name, Thy kingdom
+                come, Thy will be done on earth as it is in heaven. Give us this
+                day our daily bread; and forgive us our trespasses, as we
+                forgive those who trespass against us; and lead us not into
+                temptation, but deliver us from evil. For Thine is the kingdom
+                and the power and the glory forever and ever. Amen.
+              </p>
+            </div>
+          </section>
           <p class="instruction">
             If you choose, you may also say this little prayer:
           </p>
           <section
             class="inline-prayers"
-            aria-labelledby="morning-optional-little-prayer"
+            aria-label="Morning optional prayer"
+            data-prayer-period="morning"
           >
+            <h3 id="morning-prayer-title">Morning Prayer</h3>
             <div class="poetic-text">
               <p>
-                I thank you, my heavenly Father,<br />
-                through Jesus Christ, Your dear Son,<br />
-                that You have graciously kept me this day;<br />
-                and I pray that You would forgive me<br />
-                &nbsp;&nbsp;all my sins where I have done wrong,<br />
-                and graciously keep me this night.<br />
-                For into Your hands I commend myself,<br />
-                &nbsp;&nbsp;my body and soul, and all things.<br />
-                Let Your holy angel be with me,<br />
-                that the evil foe may have<br />
-                &nbsp;&nbsp;no power over me.<br />
-                Amen.
+                I thank you, my heavenly Father, through Jesus Christ, Your dear
+                Son, that You have kept me this night from all harm and danger;
+                and I pray that You would keep me this day also from sin and
+                every evil, that all my doings and life may please You. For into
+                Your hands I commend myself, my body and soul, and all things.
+                Let Your holy angel be with me, that the evil foe may have no
+                power over me. Amen.
               </p>
             </div>
           </section>
-          <p class="instruction">Then go to sleep at once and in good cheer.</p>
+          <section
+            class="inline-prayers"
+            aria-label="Evening optional prayer"
+            data-prayer-period="evening"
+            hidden
+          >
+            <h3 id="evening-prayer-title">Evening Prayer</h3>
+            <div class="poetic-text">
+              <p>
+                I thank you, my heavenly Father, through Jesus Christ, Your dear
+                Son, that You have graciously kept me this day; and I pray that
+                You would forgive me all my sins where I have done wrong, and
+                graciously keep me this night. For into Your hands I commend
+                myself, my body and soul, and all things. Let Your holy angel be
+                with me, that the evil foe may have no power over me. Amen.
+              </p>
+            </div>
+          </section>
+          <p class="instruction" data-prayer-period="morning">
+            Then go joyfully to your work, singing a hymn, like that of the Ten
+            Commandments, or whatever your devotion may suggest.
+          </p>
+          <p class="instruction" data-prayer-period="evening" hidden>
+            Then go to sleep at once and in good cheer.
+          </p>
         </div>
       </section>
 
       <p class="source-note">
-        From <cite>Luther’s Small Catechism</cite>.
+        From <cite>Luther’s Small Catechism</cite>,
         <a
           href="https://bookofconcord.org/small-catechism/"
           target="_blank"
           rel="noreferrer"
-          >Read the source <span aria-hidden="true">↗</span></a
         >
+          read the source.
+        </a>
+        <br />
+        The <cite>Luther Rose</cite> icons are based on
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Lutherrose.svg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Lutherrose.svg
+        </a>
+        and licensed under
+        <a
+          href="https://creativecommons.org/licenses/by-sa/3.0/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          CC BY-SA 3.0 </a
+        >.
       </p>
     </main>
   </body>
