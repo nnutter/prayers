@@ -1,0 +1,28 @@
+[tools]
+"aqua:rhysd/actionlint" = "1.7.12"
+node = "26.7.0"
+"npm:prettier" = "3.9.6"
+
+[tasks.fmt]
+description = "Format website source files"
+run = "prettier --write index.html styles.css script.js README.md .github/workflows/checks.yml .github/workflows/pages.yml"
+
+[tasks.fmt-check]
+description = "Check website source formatting"
+run = "prettier --check index.html styles.css script.js README.md .github/workflows/checks.yml .github/workflows/pages.yml"
+
+[tasks.lint]
+description = "Lint GitHub Actions workflows"
+run = "actionlint .github/workflows/*.yml"
+
+[tasks.test]
+description = "Check JavaScript syntax"
+run = "node --check script.js"
+
+[tasks.check]
+description = "Run formatting, lint, and syntax checks"
+depends = ["fmt-check", "lint", "test"]
+
+[tasks.ci]
+description = "Run all continuous integration checks"
+depends = ["check"]
