@@ -9,8 +9,7 @@ const prayerPeriods = {
   },
 };
 
-const prayerPanels = document.querySelectorAll("[data-prayer-panel]");
-const commonPrayers = document.querySelector("#common-prayers");
+const prayerElements = document.querySelectorAll("[data-prayer-period]");
 const periodToggle = document.querySelector("#period-toggle");
 const periodLabel = document.querySelector("#period-label");
 const currentTime = document.querySelector("#current-time");
@@ -36,20 +35,11 @@ function updatePeriodLabel(period) {
 function showPrayer(period) {
   selectedPeriod = period;
 
-  prayerPanels.forEach((panel) => {
-    panel.hidden = panel.dataset.prayerPanel !== period;
+  prayerElements.forEach((element) => {
+    element.hidden = element.dataset.prayerPeriod !== period;
   });
 
-  placeCommonPrayers(period);
   updatePeriodLabel(period);
-}
-
-function placeCommonPrayers(period) {
-  const targetSlot = document.querySelector(
-    `[data-common-prayers-slot="${period}"]`,
-  );
-
-  targetSlot.append(commonPrayers);
 }
 
 function updateClock() {
